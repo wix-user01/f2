@@ -2,7 +2,7 @@ var vine = require('./vine.js');
 var _ = require('underscore-node');
 
 exports.widget = function(req, res) {
-    res.render('index', { debug: req.query.debug || false});
+    res.render('widget', { debug: req.query.debug || false});
 };
 
 exports.settings = function(req, res) {
