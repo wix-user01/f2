@@ -1,6 +1,8 @@
 var url = require('url');
-var APP_SECRET = 'XXXXXXXXXXXXXXXXXXXXX';
 var crypto = require("crypto");
+var dotenv = require('dotenv').load();
+
+var APP_SECRET = process.env.APP_SECRET;
 
 function Authentication() {
     this.authenticate = function(req, res, next) {

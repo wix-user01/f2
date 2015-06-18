@@ -4,6 +4,7 @@
   "description": "A sample Wix app using Node.js, Express 4 and Angular.js",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^1.1.0",
     "ejs": "*",
     "express": "~4.9.x",
     "grunt-bower-install": "~1.0.0",

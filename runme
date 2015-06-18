@@ -1,6 +1,7 @@
-[ ! -d ./node_modules ] && ~/.nvm/v0.10.38/bin/npm install
-[ ! -d ./bower_components ] && ~/.nvm/v0.10.38/bin/bower install
 PWD=`pwd`
 
-#~/.nvm/v0.10.38/bin/nodemon $PWD/server.js 2>&1 > $PWD/logs/fileupload.pointlook.com &
+[ ! -d $PWD/node_modules ] && ~/.nvm/v0.10.38/bin/npm install
+[ ! -d $PWD/bower_components ] && ~/.nvm/v0.10.38/bin/bower install \
+  && ln -s $PWD/app/bower_components $PWD/bower_components
+
 ~/.nvm/v0.10.38/bin/nodemon $PWD/server.js
