@@ -5,7 +5,7 @@ var app = express();
 
 app.use(express.static(__dirname + '/public'));
 
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use('/bower_components',  express.static(__dirname + '/app/bower_components'));
 
 app.set('views', __dirname+ '/app/views');
 app.set('view engine', 'ejs');
@@ -19,8 +19,8 @@ app.get('/vine/:videoId', routes.vineGetVideo);
 //app.get('/widget', authenticate, routes.widget);
 //app.get('/settings', authenticate, routes.settings);
 
-app.get('/widget', routes.widget);
-app.get('/settings', routes.settings);
+app.get('/vinewidget', routes.vinewidget);
+app.get('/vinesettings', routes.vinesettings);
 
 
 function authenticate(req, res, next) {
