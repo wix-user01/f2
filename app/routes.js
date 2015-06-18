@@ -1,6 +1,14 @@
 var vine = require('./vine.js');
 var _ = require('underscore-node');
 
+exports.uploadwidget = function(req, res) {
+    res.render('uploadwidget', { debug: req.query.debug || false});
+};
+
+exports.uploadsettings = function(req, res) {
+    res.render('uploadsettings', { });
+};
+
 exports.vinewidget = function(req, res) {
     res.render('vinewidget', { debug: req.query.debug || false});
 };
